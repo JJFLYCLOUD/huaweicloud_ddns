@@ -1,33 +1,23 @@
 # huaweicloud_ddns  华为云ddns脚本
 # 重要提示！
 ## 本项目现已有关于```ZONE_ID```和```RECORDSET_ID```获取方法的教程，不再回答任何关于此类问题的issue
-## 本脚本适用于ipv4和ipv6地址的更新，请根据需求选择对应文件
-## 请调整```sed```的行数，以适应于主机网卡ip地址的获取
-## 请确认服务器的地域，并合适选择```EndPoint```、```IAM```与```DNS```地址，避免出现无法正常更新的问题
-## ```ipv6_special.sh```为特殊定制脚本，旨在解决在禁用v6解析环境下的ipv6地址同步
-# 
+## 本脚本适用于ipv4和ipv6地址的更新，请根据需求调整注释
+## 和原脚本不同之处：只保留了在线获取IP地址，同时将v4和v6合二为一
 # 安装
-## Ubuntu/Debian
 ```
-apt-get update
+Ubuntu/Debian执行
+#apt-get update
 apt-get install wget curl dnsutils net-tools cron -y
-wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/master/huaweicloud_ddns.sh
-OR
-wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@master/huaweicloud_ddns.sh
-OR
-wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/master/huaweicloud_ddns.sh
-chmod +x ./huaweicloud_ddns.sh
-```
-## Centos
-```
+#CentOS执行
 yum install wget curl bind-utils net-tools cron -y
+
+#下载脚本
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/master/huaweicloud_ddns.sh
-OR
-wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@master/huaweicloud_ddns.sh
-OR
-wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/master/huaweicloud_ddns.sh
+#赋予执行权限
 chmod +x ./huaweicloud_ddns.sh
+之后自行修改脚本内参数
 ```
+
 
 # 首次操作
 ## 第一步，先在DNS管理控制台```https://console.huaweicloud.com/dns/```内添加对应域名解析记录
