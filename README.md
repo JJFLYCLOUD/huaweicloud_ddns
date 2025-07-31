@@ -12,7 +12,7 @@ apt-get install wget curl dnsutils net-tools cron -y
 yum install wget curl bind-utils net-tools cron -y
 
 #下载脚本
-wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/master/huaweicloud_ddns.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/JJFLYCLOUD/huaweicloud_ddns/master/huaweicloud_ddns.sh
 #赋予执行权限
 chmod +x ./huaweicloud_ddns.sh
 之后自行修改脚本内参数
